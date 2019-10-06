@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Map
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+  
+
+
+<div id="map" style="height:70%;"></div>
+<ion-list >
+  <ion-item>
+      <ion-row class="row">
+    
+          <ion-item *ngFor="let point of pointsPath">
+      
+              <ion-col size="12">
+                  {{point}}
+              </ion-col>
+          </ion-item>
+        </ion-row>
+  </ion-item>
+
+  <ion-item>
+      <ion-grid >
+          <ion-row>
+            <ion-col offset-4>
+              <div class="ion-padding">
+                <ion-button color="primary" [disabled]="!pathIsCreated" slot="end" (click)="getShowPath()">Crea percorso</ion-button>
+              </div>
+            </ion-col>
+      
+            <ion-col>
+              <div class="ion-padding">
+                <ion-button color="primary" [disabled]="!savePath" slot="end" (click)="savePathNavigate()">Salva</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </ion-item>
+
+</ion-list>

@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-grid >
+
+      <ion-row>
+        <ion-card class="welcome-card">
+          <img src="/assets/icon-m.png" alt="" />
+          <ion-card-header>
+            <ion-card-title class="card-l-title">Guarda tutti i punti di interesse</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-row>
+
+      <ion-row>
+        <ion-col offset-4>
+          <ion-card class="welcome-card" (click)="setTypePAth()">
+            <img src="/assets/icon0-m.png" alt="" />
+            <ion-card-header>
+              <ion-card-title class="card-m-title">Percorsi bike</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="welcome-card" (click)="setTypePAth()">
+            <img src="/assets/icon1-m.png" alt="" />
+            <ion-card-header>
+              <ion-card-title class="card-m-title">Percorsi fitness</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card class="welcome-card" (click)="setTypePAth()">
+            <img src="/assets/icon2-m.png" alt="" />
+            <ion-card-header>
+              <ion-card-title class="card-m-title">Percorsi turistici</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+
+        <ion-col offset-4>
+          <ion-card class="welcome-card" (click)="setTypePAth()">
+            <img src="/assets/icon3-m.png" alt="" />
+            <ion-card-header>
+              <ion-card-title class="card-m-title">Profilo</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row >
+        <ion-card class="welcome-card" style="height: 0%">
+          <img src="/assets/icon4-m.png" alt="" />
+          <ion-card-header>
+            <ion-card-title class="card-l-title">Eventi: mostre, concerti e spettacoli</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-row>
+
+    </ion-grid>
+  </ion-list>
+</ion-content>
