@@ -10,89 +10,6 @@
     
     <form [formGroup]="formFilters" (ngSubmit)="savefilters()">
     <div class="section">
-      <ion-item class="item">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="12">
-                    <div >
-                        <ion-label class="label">Quando fare il percorso</ion-label>
-                        <ion-button>Scegli<ion-datetime displayFormat="DD-MM-YYYY HH:mm" ></ion-datetime></ion-button>
- 
-                    </div>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-        
-    </ion-item>
-    <ion-item class="item">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="12">
-                    <div >
-                        <ion-label class="label">Step #1</ion-label>  
-                    </div>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-        
-    </ion-item>
-
-    <ion-item class="item">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="12">
-                    <div >
-                        <ion-label class="label">Filtra in base alle esigenze</ion-label>  
-                    </div>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-        
-    </ion-item>
-    <ion-item class="item">
-                    
-        <ion-grid>
-            <ion-row>
-                <ion-col size="4" class="ion-text-start">
-                    
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon0-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                            <ion-toggle class="toggle" checked="{{filtersRow.piedi}}"  formControlName="piedi"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label">A piedi</ion-label>
-                    </ion-row>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center" >
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon1-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                        <ion-toggle class="toggle" checked="{{filtersRow.bici}}"  formControlName="bici"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label">In bici</ion-label>
-                    </ion-row>
-                
-                </ion-col>
-                <ion-col size="4" class="ion-text-end" >
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon2-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                        <ion-toggle class="toggle" checked="{{filtersRow.auto}}"  formControlName="auto"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label" >In auto</ion-label>
-                    </ion-row>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-            
-        
-    </ion-item>
 
     <ion-item class="item">
                     
@@ -104,7 +21,7 @@
                         <img style="height:50px" src="/assets/icon/icon3-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                            <ion-toggle class="toggle" checked="{{filtersRow.turisti}}"  formControlName="turisti"></ion-toggle>
+                            <ion-toggle class="toggle" formControlName="turisti"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">Turisti</ion-label>
@@ -115,7 +32,7 @@
                         <img style="height:50px" src="/assets/icon/icon4-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                        <ion-toggle class="toggle" checked="{{filtersRow.fitness}}"  formControlName="fitness"></ion-toggle>
+                        <ion-toggle class="toggle"  formControlName="fitness"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">Fitness</ion-label>
@@ -127,7 +44,7 @@
                         <img style="height:50px" src="/assets/icon/icon5-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                        <ion-toggle class="toggle" checked="{{filtersRow.famiglia}}"  formControlName="famiglia"></ion-toggle>
+                        <ion-toggle class="toggle"  formControlName="famiglia"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">Famiglia</ion-label>
@@ -148,7 +65,7 @@
                         <img style="height:50px" src="/assets/icon/icon6-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                            <ion-toggle class="toggle" checked="{{filtersRow.anziani}}" formControlName="anziani"></ion-toggle>
+                            <ion-toggle class="toggle" formControlName="anziani"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">Età avanzata</ion-label>
@@ -159,7 +76,7 @@
                         <img style="height:50px" src="/assets/icon/icon7-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                        <ion-toggle class="toggle" checked="{{filtersRow.disabilita}}"  formControlName="disabilita"></ion-toggle>
+                        <ion-toggle class="toggle"  formControlName="disabilita"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">Disabilità</ion-label>
@@ -168,14 +85,17 @@
                 </ion-col>
                 
             </ion-row>
-            <ion-row>
-                <div padding>
-                    <ion-button color="primary" type="submit" [disabled]="!formFilters.valid">Salva</ion-button>
-                </div>
-            </ion-row>
         </ion-grid>
         
     </ion-item>
+    
+        <ion-grid>
+            <ion-row>
+                <div class="ion-padding">
+                    <ion-button color="primary" type="submit" [disabled]="!formFilters.dirty">Salva</ion-button>
+                </div>
+            </ion-row>
+        </ion-grid>
     
     </div>
 </form>
