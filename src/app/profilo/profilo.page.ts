@@ -34,9 +34,6 @@ export class ProfiloPage {
     private toast: Toast) {  
 
       this.formFilters = this.formBuilder.group({
-        piedi: [null,Validators.required],
-        bici: [null,Validators.required],
-        auto: [null,Validators.required],
         turisti: [null,Validators.required],
         fitness: [null,Validators.required],
         famiglia: [null,Validators.required],
@@ -53,6 +50,7 @@ export class ProfiloPage {
           this.database=db
           this.createDatabase()
         })
+        
     }
 
   showDatePicker(){
@@ -67,70 +65,64 @@ export class ProfiloPage {
   }
 
   createDatabase(){
-      this.database.executeSql(`
-          CREATE TABLE IF NOT EXISTS filtersProfile(
-            rowid INTEGER PRIMARY KEY, 
-            piedi TEXT, 
-            bici TEXT, 
-            auto TEXT,
-            turisti TEXT,
-            fitness TEXT,
-            famiglia TEXT,
-            anziani TEXT,
-            disabilita TEXT)`, [])
-          .then((createTable)=>{
-            this.database.executeSql(`select * from filtersProfile`,[])
-            .then((resultSelect)=>{
 
-              if(resultSelect.rows.length > 0) {
-                this.formFilters["piedi"]=resultSelect.rows.item(0).piedi
-                this.filtersRow.piedi = resultSelect.rows.item(0).piedi
 
-                this.filtersRow.bici = resultSelect.rows.item(0).bici
-                this.formFilters["bici"]=resultSelect.rows.item(0).bici
-                
-                this.filtersRow.auto = resultSelect.rows.item(0).auto
-                this.formFilters["auto"]=resultSelect.rows.item(0).auto
-                
-                this.filtersRow.turisti = resultSelect.rows.item(0).turisti
-                this.formFilters["turisti"]=resultSelect.rows.item(0).turisti
+    
+    this.database.executeSql(`
+    CREATE TABLE IF NOT EXISTS filtersProfile(
+      rowid INTEGER PRIMARY KEY, 
+      turisti TEXT,
+      fitness TEXT,
+      famiglia TEXT,
+      anziani TEXT,
+      disabilita TEXT)`, [])
+    .then((createTable)=>{
+      this.database.executeSql(`select * from filtersProfile`,[])
+      .then((resultSelect)=>{
 
-                this.filtersRow.fitness = resultSelect.rows.item(0).fitness
-                this.formFilters["fitness"]=resultSelect.rows.item(0).fitness
-                
-                this.filtersRow.famiglia = resultSelect.rows.item(0).famiglia
-                this.formFilters["famiglia"]=resultSelect.rows.item(0).famiglia
-
-                this.filtersRow.anziani = resultSelect.rows.item(0).anziani
-                this.formFilters["anziani"]=resultSelect.rows.item(0).anziani
-
-                this.filtersRow.disabilita = resultSelect.rows.item(0).disabilita
-                this.formFilters["disabilita"]=resultSelect.rows.item(0).disabilita
-                
-                
-              }
-            })
-            .catch((e)=>{
-              this.toast.show("Error", '3000', 'center').subscribe(
-                toast => {
-                  console.log(toast);
-              })
-            })
+        if(resultSelect.rows.length > 0) {
+          this.toast.show(JSON.stringify(JSON.parse(resultSelect.rows.item(0).turisti)+
+          JSON.parse(resultSelect.rows.item(0).fitness)+
+          JSON.parse(resultSelect.rows.item(0).famiglia)+
+          JSON.parse(resultSelect.rows.item(0).anziani)+
+          JSON.parse(resultSelect.rows.item(0).disabilita)), '3000', 'center').subscribe(
+            toast => {
+              console.log(toast);
           })
+          this.formFilters.controls.turisti.setValue(JSON.parse(resultSelect.rows.item(0).turisti))
+          this.formFilters.controls.fitness.setValue(JSON.parse(resultSelect.rows.item(0).fitness))
+          this.formFilters.controls.famiglia.setValue(JSON.parse(resultSelect.rows.item(0).famiglia))
+          this.formFilters.controls.anziani.setValue(JSON.parse(resultSelect.rows.item(0).anziani))
+          this.formFilters.controls.disabilita.setValue(JSON.parse(resultSelect.rows.item(0).disabilita))
+          
+        }else{
+          this.formFilters.controls.turisti.setValue(false)
+          this.formFilters.controls.fitness.setValue(false)
+          this.formFilters.controls.famiglia.setValue(false)
+          this.formFilters.controls.anziani.setValue(false)
+          this.formFilters.controls.disabilita.setValue(false)
+        }
+      })
+      .catch((e)=>{
+        this.toast.show("Error", '3000', 'center').subscribe(
+          toast => {
+            console.log(toast);
+        })
+      })
+    })
+
+
   }
 
   savefilters(){
     this.database.executeSql(`
-        REPLACE INTO filtersProfile (rowid,piedi,bici,auto,turisti,fitness,famiglia,anziani,disabilita)
-          VALUES(1,?,?,?,?,?,?,?,?)`, 
-          [JSON.stringify(this.formFilters.value.piedi),
-            JSON.stringify(this.formFilters.value.bici),
-            JSON.stringify(this.formFilters.value.auto),
-            JSON.stringify(this.formFilters.value.turisti),
-            JSON.stringify(this.formFilters.value.fitness),
-            JSON.stringify(this.formFilters.value.famiglia),
-            JSON.stringify(this.formFilters.value.anziani),
-            JSON.stringify(this.formFilters.value.disabilita)
+        REPLACE INTO filtersProfile (rowid,turisti,fitness,famiglia,anziani,disabilita)
+          VALUES(1,?,?,?,?,?)`, [
+            JSON.stringify(this.formFilters.controls.turisti.value),
+            JSON.stringify(this.formFilters.controls.fitness.value),
+            JSON.stringify(this.formFilters.controls.famiglia.value),
+            JSON.stringify(this.formFilters.controls.anziani.value),
+            JSON.stringify(this.formFilters.controls.disabilita.value)
           ])
       .then((tableInserted)=>{
         
