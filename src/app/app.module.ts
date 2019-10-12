@@ -13,12 +13,16 @@ import { PathService } from './shared/services/path.service';
 import { FilterListService } from './shared/services/filters.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { Toast } from '@ionic-native/toast/ngx';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpModule,HttpClientModule ],
   providers: [
+    SQLite, 
+    Toast,
     DatePicker,
     StatusBar,
     SplashScreen,
