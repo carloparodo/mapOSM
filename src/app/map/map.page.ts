@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Map, tileLayer, marker, icon,polyline ,geoJSON } from 'leaflet';
+import { Map,LeafIcon, tileLayer, marker, icon,polyline ,geoJSON } from 'leaflet';
 import { Platform } from '@ionic/angular';
 import { PathService } from '../shared/services/path.service';
 import { FilterListService } from '../shared/services/filters.service';
@@ -20,7 +20,19 @@ export class MapPage {
 
   pathIsCreated: boolean = false;
   savePath : boolean = false;
-
+  icons= {
+    greenIcon : icon({
+      iconUrl: '/assets/pref-2/green-s.png',
+      iconSize: [25, 25], 
+      popupAnchor: [0, -20]
+    }),
+    redIcon : icon({
+      iconUrl: '/assets/pref-2/red-s.png',
+      iconSize: [25, 25],  
+      popupAnchor: [0, -20]
+    })
+  }
+  
   constructor(
     public plt: Platform,
     public pathService: PathService,
@@ -44,7 +56,6 @@ export class MapPage {
 
     this.map.invalidateSize();
     this.map.on('click', (e)=>{
-      console.log(e)
       this.onMapClick(e)
     });
 
@@ -53,19 +64,25 @@ export class MapPage {
 
   onMapClick(e) {
 
-
     if(this.pointsPath.length < 2){
+      
+      if(this.pointsPath.length == 0){
+        marker([e.latlng.lat, e.latlng.lng], {icon: this.icons.greenIcon})
+        .addTo(this.map);
+      }else{
+        marker([e.latlng.lat, e.latlng.lng], {icon: this.icons.redIcon})
+        .addTo(this.map);
+      }
+      
       this.pointsPath
         .push(e.latlng)
     }
-    console.log(this.pointsPath.length)
+    
     if(this.pointsPath.length == 2) this.pathIsCreated= true;
   }
 
   getShowPath(){
-    console.log("getShowPath")
     
-    //this.router.navigate(["/tabs/path"]);
     let pointStart= this.pointsPath[0].lat + "," +this.pointsPath[0].lng
     let pointEnd= this.pointsPath[1].lat + "," +this.pointsPath[1].lng
 
@@ -98,10 +115,7 @@ export class MapPage {
           newPointList = newPointList.replace("]","");
       
           // 2. split sulle virgole:
-          let PointList1Dim = newPointList.split(",");    
-          console.log(PointList1Dim);
-
-          //this.pointsPath=PointList1Dim;
+          let PointList1Dim = newPointList.split(",");
 
           geoJSON({
             "type": "LineString", 
@@ -112,7 +126,7 @@ export class MapPage {
           this.pathIsCreated=false
         },
         error => {
-          console.log(error);
+          
         });
   }
 

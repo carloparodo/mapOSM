@@ -33,6 +33,8 @@
         </ion-grid>
         
     </ion-item>
+    
+    <form [formGroup]="formModalitaFilters" (ngSubmit)="setFiltersPath()">
     <ion-item class="item">
                     
         <ion-grid>
@@ -43,7 +45,7 @@
                         <img style="height:50px" src="/assets/icon/icon0-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                            <ion-toggle class="toggle"></ion-toggle>
+                            <ion-toggle class="toggle"formControlName="piedi" (ionChange)="isPiediSelected()"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">A piedi</ion-label>
@@ -54,7 +56,7 @@
                         <img style="height:50px" src="/assets/icon/icon1-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                        <ion-toggle class="toggle"></ion-toggle>
+                        <ion-toggle class="toggle" formControlName="bici" (ionChange)="isBiciSelected()"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">In bici</ion-label>
@@ -66,7 +68,7 @@
                         <img style="height:50px" src="/assets/icon/icon2-s.png" alt="" />
                     </ion-row>
                     <ion-row >
-                        <ion-toggle class="toggle"></ion-toggle>
+                        <ion-toggle class="toggle" formControlName="macchina" (ionChange)="isMacchinaSelected()"></ion-toggle>
                     </ion-row>
                     <ion-row >
                         <ion-label class="label">In auto</ion-label>
@@ -78,85 +80,10 @@
         
     </ion-item>
 
-    <ion-item class="item">
-                    
-        <ion-grid>
-            <ion-row>
-                <ion-col size="4" class="ion-text-start">
-                    
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon3-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                            <ion-toggle class="toggle"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label">Turisti</ion-label>
-                    </ion-row>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center" >
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon4-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                        <ion-toggle class="toggle"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label">Fitness</ion-label>
-                    </ion-row>
-                
-                </ion-col>
-                <ion-col size="4" class="ion-text-ends" >
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon5-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                        <ion-toggle class="toggle"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label">Famiglia</ion-label>
-                    </ion-row>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-        
-    </ion-item>
-
-    <ion-item class="item">
-                    
-        <ion-grid>
-            <ion-row>
-                <ion-col size="4" class="ion-text-start">
-                    
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon6-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                            <ion-toggle class="toggle"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label">Età avanzata</ion-label>
-                    </ion-row>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center" >
-                    <ion-row >
-                        <img style="height:50px" src="/assets/icon/icon7-s.png" alt="" />
-                    </ion-row>
-                    <ion-row >
-                        <ion-toggle class="toggle"></ion-toggle>
-                    </ion-row>
-                    <ion-row >
-                        <ion-label class="label">Disabilità</ion-label>
-                    </ion-row>
-                
-                </ion-col>
-                
-            </ion-row>
-        </ion-grid>
-        
-    </ion-item>
         <div class="ion-padding">
-            <ion-button color="primary" slot="end" (click)="setFiltersPath()">Avanti</ion-button>
+            <ion-button color="primary" type="submit" [disabled]="!formDisabled">Avanti</ion-button>    
         </div>
+    
+    </form>
     </div>
 </ion-content>
