@@ -4,22 +4,17 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 
 @Injectable()
 export class FilterListService {
-    filterList: Array<Filter>
+    filterList=[]
 
-    sqlite: SQLite
-    database:SQLiteObject
-
-    seedDatabase(){
-        this.sqlite.create({
-            name: 'filters.db',
-            location: 'default'
-          })
-            .then((db: SQLiteObject) => {this.database=db})
-            .catch(e =>{});
-              
+    getFilterObject(){
+        return this.filterList
     }
 
-    getFilterList(){
-        return this.filterList
+    setFilterObjct(filter){
+        this.filterList.push(filter)
+    }
+
+    removeListFilters(){
+        this.filterList=[]
     }
 }

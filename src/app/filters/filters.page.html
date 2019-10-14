@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
       <ion-title>
-        Filters
+        Filtri
       </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -80,9 +80,11 @@
         
     </ion-item>
 
-        <div class="ion-padding">
-            <ion-button color="primary" type="submit" [disabled]="!formDisabled">Avanti</ion-button>    
-        </div>
+        <ion-fab *ngIf="formDisabled" vertical="bottom" horizontal="end" slot="fixed">
+            <ion-fab-button>
+                <ion-button  type="submit"><ion-icon name="arrow-forward"></ion-icon></ion-button>
+            </ion-fab-button>
+        </ion-fab>
     
     </form>
     </div>
