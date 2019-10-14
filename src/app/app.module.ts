@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 import { Toast } from '@ionic-native/toast/ngx';
+import { PoiService } from './shared/services/poi.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { Toast } from '@ionic-native/toast/ngx';
     SplashScreen,
     PathService,
     FilterListService,
+    PoiService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

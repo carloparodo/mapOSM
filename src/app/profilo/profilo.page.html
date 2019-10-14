@@ -89,13 +89,12 @@
         
     </ion-item>
     
-        <ion-grid>
-            <ion-row>
-                <div class="ion-padding">
-                    <ion-button color="primary" type="submit" [disabled]="!formFilters.dirty">Salva</ion-button>
-                </div>
-            </ion-row>
-        </ion-grid>
+        
+        <ion-fab *ngIf="formFilters.dirty" vertical="bottom" horizontal="end" slot="fixed">
+            <ion-fab-button>
+                <ion-button  (click)="getShowPath()"  type="submit"><ion-icon name="done-all"></ion-icon></ion-button>
+            </ion-fab-button>
+        </ion-fab>
     
     </div>
 </form>

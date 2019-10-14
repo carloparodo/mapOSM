@@ -10,8 +10,8 @@ export class PathService {
     constructor(private http: HttpClient) { }
     
     getPath(pointStart, pointEnd, filter) {
-        console.log(`http://156.148.14.188:8080/v1/requestTrip/31-12-2001/`+ pointStart + '/'+ pointEnd + '/1' )
-        return this.http.get<any>(`http://156.148.14.188:8080/v1/requestTrip/31-12-2001/`+ pointStart + '/'+ pointEnd + '/1' )
+        console.log(`http://156.148.14.188:8080/v1/requestTrip/31-12-2001/`+ pointStart + '/'+ pointEnd + '/'+filter.id  )
+        return this.http.get<any>(`http://156.148.14.188:8080/v1/requestTrip/31-12-2001/`+ pointStart + '/'+ pointEnd + '/'+ filter.id )
     }
 
     

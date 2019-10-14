@@ -1,0 +1,83 @@
+[
+    {
+        "_id": "5820ad7b0a7944480b8bcdd8",
+        "link": "http://it.dbpedia.org/resource/Torre_di_San_Pancrazio_(Cagliari)",
+        "label": "Torre di San Pancrazio (Cagliari)",
+        "abstract": "La torre di San Pancrazio, di epoca pisana, è la torre più alta di Cagliari. L'edificio, uno dei simboli della città (tanto che le torrette nel palazzo civico di via Roma sono state ispirate proprio dalle due due torri pisane), si trova nel punto più alto di Castello, a fianco del palazzo delle Seziate, ed è raggiungibile dalla via Indipendenza, dal viale Buoncammino tramite la porta Cristina, e da via Ubaldo Badas tramite la porta di San Pancrazio. La visita al monumento consente di ammirare vasti panorami della città e del circondario.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Torresanpancrazio.jpg?width=300",
+        "lat": "39.2214",
+        "long": "9.11722"
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcdd9",
+        "link": "http://it.dbpedia.org/resource/Bastione_di_Saint_Remy",
+        "label": "Bastione di Saint Remy",
+        "abstract": "Il bastione di Saint Remy è una delle fortificazioni più importanti di Cagliari, situata nel quartiere Castello.Il nome deriva dal primo viceré piemontese, Filippo-Guglielmo Pallavicini, barone di Saint Remy. Alla fine del XIX secolo venne monumentalmente trasformato in una scalinata, sormontata dall'arco di Trionfo, che dà accesso ad una passeggiata coperta e ad una grande terrazza panoramica.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cagliari16.jpg?width=300",
+        "lat": "39.2161",
+        "long": "9.11667"
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcddb",
+        "link": "http://it.dbpedia.org/resource/Cripta_di_Sant'Agostino",
+        "label": "Cripta di Sant'Agostino",
+        "abstract": "L'anno del testo dell'epigrafe è MDCXXXVIII La cripta di Sant'Agostino è una piccola cappella ipogeica di Cagliari, sita nel largo Carlo Felice, a Stampace. Alla cripta si accede, tramite una scala a chiocciola, dall'androne del palazzo Accardo.La cripta costituisce ciò che resta della chiesa e del convento degli agostiniani, eretti dove la tradizione identificava il luogo in cui vennero custodite, dal 504 al 722 , le spoglie di sant'Agostino di Ippona. Il corpo del santo dottore giunse a Cagliari al seguito di san Fulgenzio di Ruspe che, insieme ad altri vescovi provenienti dal nord Africa, venne esiliato in Sardegna dal re Vandalo Trasamondo, e vi rimase sino al 722, quando venne traslato a Pavia per volere del re Longobardo Liutprando, allo scopo di preservare le reliquie dalle scorrerie dei Saraceni. La grotta, ambiente probabilmente già utilizzato in epoca romana, dove si custodirono le reliquie del santo continuò ad essere un luogo di culto e divenne la cripta di una chiesa dedicata a sant'Agostino, edificata nel XV secolo in stile gotico e affiancata dal convento dei monaci che la officiavano. Nella seconda metà del XVI secolo chiesa e convento, che sorgevano extra moenia, vennero demoliti per permettere i lavori di riammodernamento della cinta muraria della città voluti da Filippo II di Spagna. Lo stesso sovrano si preoccupò di commissionare e finanziare la costruzione di un nuovo tempio dedicato al santo che, affiancato dal nuovo convento degli agostiniani, venne eretto intra moenia, nella Marina.Dell'antica chiesa venne lasciata in piedi solo una piccola cappella, soprastante la cripta. Alla fine del XIX secolo, in seguito ai lavori di sistemazione del largo Carlo Felice, la cappella venne demolita per far posto al palazzo Accardo, progettato da Dionigi Scano. Rimase solo l'antica cripta, ancora oggi visitabile.All'interno dell'ipogeo, a pianta rettangolare, si può ammirare un altare marmoreo in stile classico, eretto nel 1638 per volere della marchesa di Villacidro Elena Brondo, allo scopo di onorare il luogo dove venne custodito il corpo di sant'Agostino. L'altare comprende una nicchia, dove è custodita una statua del santo, e il paliotto, che include un bassorilievo raffigurante sant'Agostino giacente tra due angeli e l'iscrizione con la data di erezione dell'altare. Dietro l'altare si trova la cavità che, secondo la tradizione, contenne le reliquie del santo; la stessa cavità raccoglie l'acqua, un tempo considerata miracolosa , proveniente da una sorgente che sgorga nella grotta. La parte bassa delle pareti laterali della cripta e decorata da azulejos seicenteschi.",
+        "image": "http://it.wikipedia.org/wiki/Special:FilePath/Ipogeo_agostino.JPG?width=300",
+        "lat": "39.2156",
+        "long": "9.11111"
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcdd7",
+        "link": "http://it.dbpedia.org/resource/Torre_dell'Elefante",
+        "label": "Torre dell'Elefante",
+        "abstract": "La torre dell'Elefante è la seconda torre medievale più alta di Cagliari, dopo la torre di San Pancrazio.L'edificio, uno dei monumenti più importanti della città, si trova nel quartiere Castello al fianco della chiesa di San Giuseppe ed è raggiungibile dalla via Santa Croce, dalla via Università e dal Cammino Nuovo.La visita al monumento consente di ammirare vasti panorami della città e del circondario.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Torreelefante.jpg?width=300",
+        "lat": "39.2181",
+        "long": "9.115"
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcdda",
+        "link": "http://it.dbpedia.org/resource/Monumento_a_Carlo_Felice",
+        "label": "Monumento a Carlo Felice",
+        "abstract": "Il monumento a Carlo Felice di Savoia è collocato tra il largo Carlo Felice e la piazza Yenne, nel centro storico di Cagliari.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carlofelice1870.jpg?width=300",
+        "lat": "39.2172",
+        "long": "9.11333"
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcddc",
+        "link": "http://it.dbpedia.org/resource/Torre_dello_Sperone",
+        "label": "Torre dello Sperone",
+        "abstract": "La torre dello Sperone, o degli Alberti o di San Michele, è una torre medievale di Cagliari, unica testimonianza della cinta muraria, eretta dai pisani nel XIII secolo, a difesa di Stampace. L'edificio, attraversato alla base da un portico, sorge tra la via Portoscalas e la via Ospedale, adiacente all'ospedale militare e alla chiesa di San Michele.L'iscrizione il latino, posta sul prospetto della torre che guarda alla via Portoscalas, informa che l'opera venne completata nel mese di marzo del 1293, mentre era capitano del comune di Castel di Castro un Alberti, il cui stemma campeggia al centro dell'epigrafe.La torre, a canna quadrangolare, venne eretta in pietra calcarea. Sulla facciata in via Portoscalas, oltre all'epigrafe citata, ornano l'edificio alcune finestre rettangolari e una sorta di loggietta cieca, costituita da quattro archi a tutto sesto. A tutto sesto è anche l'arco del sottostante portico.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/StampaceCA3.jpg?width=300",
+        "lat": "39.2186",
+        "long": "9.11167"
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcddd",
+        "link": "http://it.dbpedia.org/resource/Porta_Cristina",
+        "label": "Porta Cristina",
+        "abstract": "Porta Cristina, a Cagliari, è una porta di accesso al quartiere Castello che collega il viale Buoncammino, ove è presente lo storico carcere, alla piazza Arsenale. L'attuale Porta Cristina sostituì Porta del Soccorso, risalente al XVII secolo, e venne edificata nel 1825 in stile neoclassico, secondo un progetto del conte Carlo Pilo Boyl approvato da re Carlo Felice di Savoia. La porta venne chiamata Cristina in onore della regina Maria Cristina, sposa di Carlo Felice.Porta Cristina, le cui linee si ispirano alla facciata interna della Porta Pia di Roma, presenta l'arco di accesso aperto tra due lesene che reggono una trabeazione delimitata da due cornici aggettanti, entro le quali è posta una lunetta semicircolare in cui si trova l'iscrizione dedicatoria.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Storicagliari1.jpg?width=300",
+        "lat": 39.22171105,
+        "long": 9.11655743670886
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcdde",
+        "link": "http://it.dbpedia.org/resource/Monumento_ai_caduti_delle_guerre_d'indipendenza",
+        "label": "Monumento ai caduti delle guerre d'indipendenza",
+        "abstract": "Il monumento ai caduti delle guerre d'indipendenza di Cagliari è dedicato ai Sardi caduti nelle battaglie per l'indipendenza e l'Unità d'Italia.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzaMartiriCA.jpg?width=300",
+        "lat": "39.2149705",
+        "long": "9.1205245"
+    },
+    {
+        "_id": "5820ad7b0a7944480b8bcddf",
+        "link": "http://it.dbpedia.org/resource/Monumenti_di_Cagliari",
+        "label": "Monumenti di Cagliari",
+        "abstract": "Cagliari possiede vari monumenti di interesse che testimoniano la sua storia plurimillenaria; dalle rovine della Caralis punica e romana passando per gli antichi edifici della Cagliari giudicale, pisana, aragonese e spagnola del medioevo e del rinascimento fino ad arrivare ai palazzi liberty sorti fra '800 e '900 e alle architetture del ventennio.",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cagliari_Roman_Amphitheatre_2003.jpg?width=300",
+        "lat": 39.2401956,
+        "long": 9.1137367
+    }
+]
