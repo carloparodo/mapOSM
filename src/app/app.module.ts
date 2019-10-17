@@ -17,6 +17,12 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 import { Toast } from '@ionic-native/toast/ngx';
 import { PoiService } from './shared/services/poi.service';
 
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
+ 
+ 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -30,6 +36,9 @@ import { PoiService } from './shared/services/poi.service';
     PathService,
     FilterListService,
     PoiService,
+    AndroidPermissions,
+    Geolocation,
+    LocationAccuracy,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

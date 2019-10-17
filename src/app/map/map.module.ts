@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MapPage } from './map.page';
 import { LabelPipe } from './label.pipe';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
     imports: [
