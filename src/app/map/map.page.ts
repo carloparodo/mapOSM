@@ -30,7 +30,9 @@ export class MapPage {
   "3":{"value":3,
   "name":"Car by Speed"},
   "4":{"value":4,
-  "name":"Foot co2"}}
+  "name":"Foot co2"},
+  "5":{"value":5,
+  "name":"Bycicle co2"}}
 
   formCrationPath : FormGroup;
   layerGroup 
