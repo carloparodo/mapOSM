@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Platform } from '@ionic/angular';
-import { SQLite } from '@ionic-native/sqlite/ngx';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { Toast } from '@ionic-native/toast/ngx';
 
 @Component({
     selector: 'app-percorso',
     templateUrl: 'percorso.page.html'
   })
   export class PercorsoPage {
+
+  pathsSaved: any[];
       constructor(
         public route: ActivatedRoute,
         public plt: Platform,
@@ -52,4 +55,4 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
         })
     });
   }
-  
+}
